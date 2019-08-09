@@ -20,7 +20,7 @@
 // } 
 
 // for(var key in values) {
-//   console.log(values[key])
+//   console.log(values[key]) // objectName[key]
 // }
 
 /*
@@ -28,7 +28,7 @@
 */
 
 // for(var key in values) {
-//   console.log(key)
+//   console.log(key) // just the key itself
 // }
 
 
@@ -40,9 +40,12 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  let str = []; // creating a new variable
+  for (let key in obj) {
+    str.push(obj[key]); //adding the property values into the new array
+  }
+  return str.join(""); //join concatenates the values into a string
 }
-
 
 
 ////////// PROBLEM 2 //////////
@@ -54,7 +57,16 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function greaterThan10(obj) {
+  for (var key in obj) {
+    // if the value is greater than 10, update to the value to 0
+    if (obj[key] > 10) {
+      obj[key] = 0;
+      }
+    }
+  // return the updated object
+  return obj;
+}
 
 
 ////////// PROBLEM 3 //////////
