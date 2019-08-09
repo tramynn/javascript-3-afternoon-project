@@ -22,20 +22,24 @@ var carDetails = {
 */
 
 //Code Here
+// condensing key values into one object 
+let {color, make, model, year} = carDetails;
 
-
+// to access values:
+console.log(color); // output: red
+console.log(make); // toyota
 
 ////////// PROBLEM 2 //////////
 
 /*
   In the function below named greeting, it is receiving an object as a parameter. 
-  Use object destructuring to save the object properties to new variables. 
+  Use object destructuring to (1)save the object properties to new variables. 
   The property names are firstName, lastName, and title.
 */
 
 function greeting( obj ) {
   //Code Here
-  
+  let {firstName, lastName, title} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
