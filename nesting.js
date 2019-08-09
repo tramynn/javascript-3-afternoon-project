@@ -52,6 +52,24 @@ var employees = [
 
 //Code Here
 
+function employeeUpdater() {
+  // create a loop to loop through the array
+  for (let i = 0; i < employees.length; i++) {
+    // i represents the index of the array
+    // .firstName is used because it is selecting the firstName property key
+    if (employees[i].firstName === 'Theo') {
+      // splice is used because you are removing the value from an array and 
+      employees.splice(i, 1);
+    } // else if is not used because if the first if statement is true then the code breaks
+    if (employees[i].firstName === 'Lorie') {
+      // use either dot notation or bracket notation when accessing values
+      // nested dot/bracket notation 
+      employees[i].department = 'HR';
+    }
+  } // after it checks for those two conditions, return the modified array
+  return employees;
+}
+
 
 
 ////////// PROBLEM 2 //////////
@@ -70,8 +88,19 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 
+function removeDuplicates() {
+  for (let i = 0; i < workplaceAccidents.length; i++ ) {
+    // i + 1 >> because you're comparing the next value, not the same value
+    for (let j = workplaceAccidents.length - 1; j > i; j--) {
+      if (workplaceAccidents[i] === workplaceAccidents[j]) {
+        workplaceAccidents.splice(j, 1);
+      }
+    }
+  }
+  return workplaceAccidents;
+}
 
-
+removeDuplicates(workplaceAccidents);
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
